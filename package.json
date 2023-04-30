@@ -1,0 +1,23 @@
+{
+  "name": "social-media-beapi-str",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlequernaque/Social-Media-BeAPI-Str.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tlequernaque/Social-Media-BeAPI-Str/issues"
+  },
+  "homepage": "https://github.com/tlequernaque/Social-Media-BeAPI-Str#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
