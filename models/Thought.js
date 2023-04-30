@@ -20,15 +20,47 @@ const thoughtSchema = new Schema(
         },
         reactions: [reactionSchema],
     },
-    // {
-    //     toJSON: {
-    //         virtuals: true,
-    //     },
-    //     id: false
-    // },
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true
+        },
+        id: false
+    },
 );
 
-userSchema.virtual('reactionCount').get(function () {
+const reactionSchema = new Schema(
+    {
+        reactionId: {
+            type: Schema.Types.ObjectId,
+            default: ,
+        },
+        reactionBody: {
+            type: String,
+            required: true,
+            maxLength: 280,
+        },
+        username: {
+            type: String,
+            required: true
+        },
+        createdAt: {
+            type: Date,
+            default: dayjs(),
+            get: timestamp => dayjs().format(DD/MM/YYYY),
+        },
+    },
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true,
+        },
+        id: false,
+    },
+);
+
+
+thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });
 
