@@ -32,11 +32,35 @@ module.exports = {
         User.findOneAndRemove({_id: req.params.userId})
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: 'No user withthat ID'})
+                    ? res.status(404).json({ message: 'No user with that ID'})
                     //need work, not right
                     : res.json({message: 'User successfully deleted'})
             )
             .then(() => res.json({ message: 'User successfully deleted' }))
             .catch((err) => res.status(500).json(err));
+    },
+
+    addFriend(req,res){
+        User.findOneAndUpdate({_id: req.params.userId})
+            .then((user) =>
+                !user
+                    ? res.status(404).json({ message: 'No friend with that ID'})
+                    //need work, not right
+                    : res.json(user)
+        )
+        .catch((err) => res.status(500).json(err));
+    },
+
+    deleteFriend(req,res){
+        User.findOneAndUpdate({_id: req.params.userId})
+        //need work, not completed
+            .then((user) =>
+                !user
+                    ? res.status(404).json({ message: ''})
+                    : res.json({message: 'User successfully added friend'})
+        )
+        .catch((err) => res.status(500).json(err));
     }
+
+
 };
