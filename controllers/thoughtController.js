@@ -1,7 +1,7 @@
 const { Thought } = require('../models')
 
 module.exports = {
-    getThoughts(req, res){
+    getAllThoughts(req, res){
         Thought.find()
             .then((thoughts) =>res.json(thoughts))
             .catch((err) => res.status(500).json(err)); 
@@ -9,16 +9,14 @@ module.exports = {
 
     getSingleThought(req, res){
         Thought.findOne({ _id: req.params.userId })
-            .select('-__v')
-            .then((thoughts) =>
-                !thought
-                    ? res.status(404).json({ message: 'No user with that ID' })
-                    : res.json({
-                        //need work, not finished
-                        thoughts,
-                        user  
-                    })
-            )
+            .select("-__v")
+            .populate("reaction")
+            .then((dbUserData) => {
+                if (!dbUserData) {
+                return res.status(404).json({ message: "No user with this id!" });
+                }
+                res.json(dbUserData);
+            })
             .catch((err) => res.status(500).json(err));
     },
 
