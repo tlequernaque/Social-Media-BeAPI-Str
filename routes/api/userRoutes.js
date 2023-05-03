@@ -2,6 +2,7 @@ const router = require('express').Router();
 const {
     getAllUsers,
     getSingleUser,
+    updateSingleUser,
     createUser,
     deleteUser,
     addFriend,
@@ -10,7 +11,7 @@ const {
 
 router.route('/').get(getAllUsers).post(createUser);
 
-router.route('/:userId').get(getSingleUser).delete(deleteUser);
+router.route('/:userId').get(getSingleUser).post(updateSingleUser).delete(deleteUser);
 
 router.route('/:userId/friends/:friendId').post(addFriend).delete(deleteFriend)
 
