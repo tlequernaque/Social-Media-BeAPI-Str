@@ -84,7 +84,6 @@ module.exports = {
             {_id: req.params.thoughtId},
             { $pull: {reactions: {reactionId: req.params.reactionId}} },
             { runValidators: true, new: true },
-            
             )
             .then((dbThoughtData) => {
                 if (!dbThoughtData) {
@@ -94,6 +93,4 @@ module.exports = {
             })
         .catch((err) => res.status(500).json(err));
     }
-
-
 };
