@@ -24,10 +24,10 @@ module.exports = {
     },
 
     createThought(req,res){
-        Thought.create(
-            {_id: params.ThoughtId},
-            { $push: {thoughts: _id} },
-            { new: true },
+        Thought.create(req.body
+            // {_id: params.thoughtId},
+            // { $push: {thoughts: _id} },
+            // { new: true },
         )
         .then((dbThoughtData) => {
             if (!dbThoughtData) {
