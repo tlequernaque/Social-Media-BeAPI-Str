@@ -23,7 +23,6 @@ module.exports = {
   },
 
   createThought(req, res) {
-    // console.log(req.body)
     Thought.create(req.body)
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
@@ -40,7 +39,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  updateThought() {
+  updateThought(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $set: req.body }, //maybe?
@@ -69,7 +68,7 @@ module.exports = {
   createReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
-      { $push: { reactions: req.body } }, //maybe?
+      { $push: { reactions: req.params.reactionId } }, //maybe?
       { runValidators: true, new: true }
     )
       .then((dbThoughtData) => {
