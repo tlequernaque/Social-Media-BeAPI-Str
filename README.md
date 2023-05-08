@@ -18,15 +18,14 @@ react to friends thoughts, and create a friend list.
 - [Technologies](#technologies)
 - [License](#license)
 - [Tests](#tests)
+- [Credits](#credits)
 - [Contribution](#how-to-contribute)
 - [Contact / Questions](#contact--questions)
 
 ## Link
-
 [Click Here](https://drive.google.com/file/d/1ICOS8zcaAqLpgkCz-Jmek_l1Cp_L_Ptm/view) to go to the video link.
 
 ## Screenshot
-
 ![image](./assets/insomnia.png)
 
 
@@ -79,6 +78,20 @@ Endpoints were tested with Insomnia.
 If you should find any issues, see above on contibuting guidelines 
 or submit a issue with a detailed explanation on how to recreate 
 the bug.
+
+
+## Credits
+<li><strong><a href="https://github.com/alc0ve" 
+target="_blank">Christina Hall</a>:</strong> Full-Stack Developer</
+li> 
+<li><strong><a href="https://github.com/blairrrrwho" 
+target="_blank">Blair Millot</a>:</strong> Full-Stack Developer</
+li>  
+<li>Vincent Teune - Teacher Assistant, helped with some code and 
+problems.</li>
+<li>Vinnie Lopez - Tutor, helped with some code and problems.</li>
+<li>AskBCS - Learning Assistant, helped with some code and 
+problems.</li>
 
 
 ## How to Contribute
