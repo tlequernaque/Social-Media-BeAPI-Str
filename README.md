@@ -23,7 +23,8 @@ react to friends thoughts, and create a friend list.
 - [Contact / Questions](#contact--questions)
 
 ## Link
-[Click Here](https://drive.google.com/file/d/1ICOS8zcaAqLpgkCz-Jmek_l1Cp_L_Ptm/view) to go to the video link.
+[Click Here](https://drive.google.com/file/d/
+1ICOS8zcaAqLpgkCz-Jmek_l1Cp_L_Ptm/view) to go to the video link.
 
 ## Screenshot
 ![image](./assets/insomnia.png)
